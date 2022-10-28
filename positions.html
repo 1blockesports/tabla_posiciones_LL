@@ -1,32 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posiciones</title>
-    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+    <title>Tabla de posiciones</title>
+    <style>
+        tbody tr td:nth-child(1),
+        tbody tr td:nth-child(3),
+        tbody tr td:nth-child(4),
+        tbody tr td:nth-child(5),
+        tbody tr td:nth-child(6)
+        {
+            width: 50px;
+            text-align: center;
+        }
+        tbody tr td:nth-child(2){
+            width: 100px;
+        }
+        img{
+            width: 100%;
+            margin: 0;
+            padding:0
+        }
+    </style>
 </head>
+
 <body>
-    <table id="table_id" class="display">
-        <thead>
-            <tr>
-                <th>Column 1</th>
-                <th>Column 2</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Row 1 Data 1</td>
-                <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-                <td>Row 2 Data 1</td>
-                <td>Row 2 Data 2</td>
-            </tr>
-        </tbody>
-    </table>
+    <div>
+        <table id="table_id" class="display">
+            <thead>
+                <tr>
+                    <th>Pos.</th>
+                    <th colspan="2">Team</th>
+                    <th>PJ</th>
+                    <th>PG</th>
+                    <th>PP</th>
+                    <th>PT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/ava_normalizado_original-150x150.png"/></td>
+                    <td>AVA GUARANI</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/kingdom_normalizado_original-150x150.png"/></td>
+                    <td>GODS KINGDOM</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/charrua_normalizado_original-150x150.png"/></td>
+                    <td>CHARRUA ESPORTS</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/blackbox_normalizado_original-150x150.png"/></td>
+                    <td>BLACK BOX</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/ff20_normalizado_original-150x150.png"/></td>
+                    <td>FF20</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/imperio_normalizado_original-150x150.png"/></td>
+                    <td>IMPERIO GAMING</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/petu_normalizado_original-150x150.png"/></td>
+                    <td>PETUGALACTICOS</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/cosmic_normalizado_original-150x150.png"/></td>
+                    <td>COSMIC GAMING</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/ulala_normalizado_original-150x150.png"/></td>
+                    <td>ULALA ESPORTS</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/rog_normalizado_originall-150x150.png"/></td>
+                    <td>ROYAL ONSLAUGHT</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#table_id').DataTable({
+                paging: false,
+                searching: false,
+                info: false
+
+            });
+        });
+    </script>
 </body>
+
 </html>
