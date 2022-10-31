@@ -1,1 +1,245 @@
-# tabla_posiciones_LL
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de posiciones</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            font-family: 'Bebas Neue', cursive;
+
+        }
+
+        table tbody {
+            color: #fff;
+            width: 200px;
+        }
+
+        #positions_table thead {
+            background: #b52c2c;
+        }
+
+        #positions_table thead tr th {
+            color: #fff;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            letter-spacing: 2px;
+            font-size: 1.6rem;
+            text-align: center;
+        }
+
+        #positions_table tbody tr td {
+            padding: 0;
+            font-size: 1.5rem;
+        }
+
+        #positions_table tbody tr td {
+            border-bottom: 1px solid rgb(56 56 56 / 66%);
+        }
+
+        tbody tr td:nth-child(1),
+        tbody tr td:nth-child(4),
+        tbody tr td:nth-child(5),
+        tbody tr td:nth-child(5),
+        tbody tr td:nth-child(6),
+        tbody tr td:nth-child(7) {
+            width: 40px;
+            text-align: center;
+        }
+
+        tbody tr td:nth-child(3) {
+            width: 170px;
+            text-align: left;
+        }
+
+        tbody tr td:nth-child(2) {
+            width: 100px;
+            text-align: center;
+        }
+
+        tbody tr td:nth-child(7) {
+            background-color: #b52c2c
+        }
+
+        img {
+            height: 50px;
+            margin: 0;
+            padding: 0
+        }
+
+        table.dataTable thead>tr>th.sorting:before,
+        table.dataTable thead>tr>th.sorting_asc:before,
+        table.dataTable thead>tr>th.sorting_desc:before,
+        table.dataTable thead>tr>th.sorting_asc_disabled:before,
+        table.dataTable thead>tr>th.sorting_desc_disabled:before,
+        table.dataTable thead>tr>td.sorting:before,
+        table.dataTable thead>tr>td.sorting_asc:before,
+        table.dataTable thead>tr>td.sorting_desc:before,
+        table.dataTable thead>tr>td.sorting_asc_disabled:before,
+        table.dataTable thead>tr>td.sorting_desc_disabled:before,
+        table.dataTable thead>tr>th.sorting:after,
+        table.dataTable thead>tr>th.sorting_asc:after,
+        table.dataTable thead>tr>th.sorting_desc:after,
+        table.dataTable thead>tr>th.sorting_asc_disabled:after,
+        table.dataTable thead>tr>th.sorting_desc_disabled:after,
+        table.dataTable thead>tr>td.sorting:after,
+        table.dataTable thead>tr>td.sorting_asc:after,
+        table.dataTable thead>tr>td.sorting_desc:after,
+        table.dataTable thead>tr>td.sorting_asc_disabled:after,
+        table.dataTable thead>tr>td.sorting_desc_disabled:after {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table id="positions_table" class="display">
+            <thead>
+                <tr>
+                    <th>Pos.</th>
+                    <th>Team</th>
+                    <th></th>
+                    <th>PJ</th>
+                    <th>PG</th>
+                    <th>PP</th>
+                    <th>PT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/ava_mini.png" />
+                    </td>
+                    <td>AVA GUARANI</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img
+                            src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/gods_kingdom_mini.png" />
+                    </td>
+                    <td>GODS KINGDOM</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/charrua_mini.png" />
+                    </td>
+                    <td>CHARRUA ESPORTS</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><img
+                            src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/blackbox_mini.png" />
+                    </td>
+                    <td>BLACK BOX</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/ff20_mini.png" />
+                    </td>
+                    <td>FF20</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/imperio_mini.png" />
+                    </td>
+                    <td>IMPERIO GAMING</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/petu_mini.png" />
+                    </td>
+                    <td>PETUGALACTICOS</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/cosmic_mini.png" />
+                    </td>
+                    <td>COSMIC GAMING</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/ulala_mini.png" />
+                    </td>
+                    <td>ULALA ESPORTS</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><img src="https://ladderleague.1blockesports.com/wp-content/uploads/2022/10/rog_mini.png" />
+                    </td>
+                    <td>ROYAL ONSLAUGHT</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#positions_table').DataTable({
+                paging: false,
+                searching: false,
+                info: false,
+                columns: [
+                    null,
+                    { orderable: false },
+                    { orderable: false },
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            });
+        });
+    </script>
+</body>
+
+</html>
